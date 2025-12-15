@@ -30,7 +30,7 @@ export const createCheckoutSession = async (req, res) => {
       };
     }));
 
-    const YOUR_DOMAIN = process.env.CLIENT_URL || "https://final-front-end-indol.vercel.app";
+    const YOUR_DOMAIN = process.env.CLIENT_URL || "http://localhost:5173";
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
