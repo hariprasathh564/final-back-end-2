@@ -28,8 +28,8 @@ export const createPayment = async (req, res) => {
         }
       ],
       mode: "payment",
-      success_url: "http://localhost:5173/payment-success?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: "http://localhost:5173/cart",
+      success_url: "https://final-front-end-indol.vercel.app/payment-success?session_id={CHECKOUT_SESSION_ID}",
+      cancel_url: "https://final-front-end-indol.vercel.app/cart",
       metadata: {
         userId: req.user.id,
         items: JSON.stringify(items),
